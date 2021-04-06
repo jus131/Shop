@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Presentation.Forms
 {
     /// <summary>
-    /// Lógica de interacción para MainEmployee.xaml
+    /// Lógica de interacción para UserControlEmployee.xaml
     /// </summary>
-    public partial class MainEmployee : Window
+    public partial class UserControlEmployee : UserControl
     {
-        public MainEmployee()
+        public UserControlEmployee()
         {
             InitializeComponent();
         }

@@ -16,10 +16,8 @@ C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\bin\Debug\MaterialDes
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\bin\Debug\DataAccess.pdb
-C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\MainEmployee.g.cs
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\MainWindow.g.cs
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\App.baml
-C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\MainEmployee.baml
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\MainWindow.baml
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Presentation.g.resources
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Presentation.Properties.Resources.resources
@@ -28,3 +26,5 @@ C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Presentatio
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Presentation.exe
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Presentation.pdb
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\UserControlEmployee.g.cs
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\UserControlEmployee.baml

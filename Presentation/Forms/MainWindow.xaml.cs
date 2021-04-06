@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Presentation.Forms;
 
 namespace Presentation
 {
@@ -27,7 +28,42 @@ namespace Presentation
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            int index = ListViewMenu.SelectedIndex;
+            MoveCursorMenu(index);
+            switch (index)
+            {
+                case 0:
+                    GridPricipal.Children.Clear();
+                    GridPricipal.Children.Add(new UserControlEmployee());
+                        break;
+                case 1:
+                    GridPricipal.Children.Clear();
+                    break;
+                case 2:
+                    GridPricipal.Children.Clear();
+                    break;
+                case 3:
+                    GridPricipal.Children.Clear();
+                    break;
+                case 4:
+                    GridPricipal.Children.Clear();
+                    break;
+                case 5:
+                    GridPricipal.Children.Clear();
+                    break;
+                default:
+                    break;
+            }
+        }
 
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+        private void MoveCursorMenu(int index)
+        {
+            TrainsitionigContentSlide.OnApplyTemplate();
+            GridCursor.Margin = new Thickness(0, (100 + (60 * index)), 0, 0);
         }
     }
 }

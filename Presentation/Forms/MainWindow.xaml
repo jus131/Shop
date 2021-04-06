@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
-    <Grid Background="#FFEEEEEE">
+    <Grid Background="#FFEEEEEE" MouseDown="Grid_MouseDown">
         <StackPanel VerticalAlignment="Top">
             <!-- Panel Top color azul rey-->
             <Grid Background="#FF0069C0" Height="10"/>
@@ -43,19 +43,19 @@
         </StackPanel>
         <!--Panel Contenedor-->
         <Grid Margin="250 55 0 0">
-            <Grid x:Name="GridPricipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Grid VerticalAlignment="Center" Height="250" Width="250" HorizontalAlignment="Center" Margin="10 10">
+            <Grid x:Name="GridPricipal" />
+            <!--<Grid VerticalAlignment="Center" Height="250" Width="250" HorizontalAlignment="Center" Margin="10 10">
                 <Image Source="/Assets/logo.png" />
-            </Grid>
+            </Grid>-->
         </Grid>
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
             <!-- Efecto de barra lateral-->
-            <materialDesign:TransitioningContent x:Name="TransitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft,Duration=0:0:0.2}">
+            <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft,Duration=0:0:0.2}">
                 <Grid x:Name="GridCursor" Margin="0 100 0 0" Background="#FF0069C0" Width="10" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top"/>
             </materialDesign:TransitioningContent>
 
             <!--Lista de Botones del menu-->
-            <ListView Margin="0 100" Foreground="LightGray" FontFamily="Champagne &amp; Limousines" FontSize="18" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0">
+            <ListView x:Name="ListViewMenu" Margin="0 100" Foreground="LightGray" FontFamily="Champagne &amp; Limousines" FontSize="18" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0">
                 <ListViewItem Height="60">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Cart" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
