@@ -1,2 +1,6 @@
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Common\obj\Debug\Common.csprojAssemblyReference.cache
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Common\bin\Debug\Common.dll
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Common\bin\Debug\Common.pdb
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Common\obj\Debug\Common.dll
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Common\obj\Debug\Common.pdb

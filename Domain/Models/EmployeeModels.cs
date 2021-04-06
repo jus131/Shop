@@ -83,6 +83,7 @@ namespace Domain
                 SqlException sqlEx = ex as SqlException;
                 if (sqlEx != null && sqlEx.Number == 2627)
                 {
+                    //devuelve el mensaje si esta duplicado
                     message = "Duplicate Record";
                 }
                 else
@@ -93,7 +94,7 @@ namespace Domain
             }
             return message;
         }
-
+        //Invicamos la lista de empleados
         public List<EmployeeModels> GetAll()
         {
             var employeeDataModel = employeeRepository.GetAll();

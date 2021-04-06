@@ -4,9 +4,94 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="600" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid Background="#FFEEEEEE">
+        <StackPanel VerticalAlignment="Top">
+            <!-- Panel Top color azul rey-->
+            <Grid Background="#FF0069C0" Height="10"/>
+            <!-- Panel Top de los botones-->
+            <Grid Margin="5">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <!--TextBlock -->
+                    <TextBlock Text="Sales System" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="20 0"/>
+                    <!--Botones de Redireccion-->
+                    <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="Facebook"/>
+                    </Button>
+                    <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="Github"/>
+                    </Button>
+                    <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="Discord"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 0">
+                    <!--Botones de herramientas-->
+                    <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="BellAddOutline"/>
+                    </Button>
+                    <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Margin="0 0 10 0">
+                        <materialDesign:PackIcon Kind="Settings"/>
+                    </Button>
+                    <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="Power"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <!--Panel Contenedor-->
+        <Grid Margin="250 55 0 0">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
+            <materialDesign:TransitioningContent x:Name="TransitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft,Duration=0:0:0.2}">
+                <Grid x:Name="GridCursor" Margin="0 100 0 0" Background="#FF0069C0" Width="10" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top"/>
+            </materialDesign:TransitioningContent>
+            <Grid VerticalAlignment="Top" Height="70" Width="70" HorizontalAlignment="Left" Margin="10 10">
+                <Image Source="/Assets/logo.png" />
+            </Grid>
+
+            <!--Lista de Botones del menu-->
+            <ListView Margin="0 100" Foreground="LightGray" FontFamily="Champagne &amp; Limousines" FontSize="18" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0">
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Cart" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Ventas" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Package" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Productos" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="AccountBox" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Clientes" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="BusinessCard" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Empleados" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="CartVariant" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Compras" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ChartBox" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Reportes" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </Grid>
     </Grid>
 </Window>
