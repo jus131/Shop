@@ -43,15 +43,16 @@
         </StackPanel>
         <!--Panel Contenedor-->
         <Grid Margin="250 55 0 0">
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Grid x:Name="GridPricipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Grid VerticalAlignment="Center" Height="250" Width="250" HorizontalAlignment="Center" Margin="10 10">
+                <Image Source="/Assets/logo.png" />
+            </Grid>
         </Grid>
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
+            <!-- Efecto de barra lateral-->
             <materialDesign:TransitioningContent x:Name="TransitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft,Duration=0:0:0.2}">
                 <Grid x:Name="GridCursor" Margin="0 100 0 0" Background="#FF0069C0" Width="10" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top"/>
             </materialDesign:TransitioningContent>
-            <Grid VerticalAlignment="Top" Height="70" Width="70" HorizontalAlignment="Left" Margin="10 10">
-                <Image Source="/Assets/logo.png" />
-            </Grid>
 
             <!--Lista de Botones del menu-->
             <ListView Margin="0 100" Foreground="LightGray" FontFamily="Champagne &amp; Limousines" FontSize="18" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0">
