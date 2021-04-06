@@ -1,0 +1,1 @@
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
