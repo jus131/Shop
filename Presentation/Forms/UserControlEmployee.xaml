@@ -57,13 +57,13 @@
                     HorizontalAlignment="Stretch"/>
                 <!--Botones de los evento Guardar o cancelar-->
                 <StackPanel Orientation="Horizontal">
-                    
                     <Button
+                        x:Name="btnAccept"
                         Style="{StaticResource MaterialDesignFlatButton}"
                         IsDefault="True"
                         Margin="50 8 5 20"
                         Content="ACEPTAR"
-                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                        Click="btnAccept_Click">
                         <Button.CommandParameter>
                             <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
                                 True
@@ -71,10 +71,12 @@
                         </Button.CommandParameter>
                     </Button>
                     <Button
+                        x:Name="btnCancel"
                         Style="{StaticResource MaterialDesignFlatButton}"
                         IsDefault="True"
                         Margin="0 8 50 20"
                         Content="CANCELAR"
+                        Click="btnCancel_Click"
                         Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
                         <Button.CommandParameter>
                             <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
