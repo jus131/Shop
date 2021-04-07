@@ -68,11 +68,12 @@ namespace DataAccess
                     id = Convert.ToInt32(item[0]),
                     name = item[1].ToString(),
                     lastName = item[2].ToString(),
-                    email = item[3].ToString(),
+                    identity = item[3].ToString(),
+                    email = item[4].ToString(),
                     birthday = Convert.ToDateTime(item[5]),
                     position = item[6].ToString(),
                     state = item[7].ToString()
-                });
+                }) ;
             }
             return listEmployee;
         }

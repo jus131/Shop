@@ -13,20 +13,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Domain;
+using Common;
 
 namespace Presentation.Forms
 {
     /// <summary>
     /// Lógica de interacción para UserControlEmployee.xaml
     /// </summary>
-   // private EmployeeModels models = new EmployeeModels();
     public partial class UserControlEmployee : UserControl
     {
+        private EmployeeModels models = new EmployeeModels();
         public UserControlEmployee()
         {
             InitializeComponent();
+            ListEmployee();
+        }
+
+        private void ListEmployee()
+        {
+            ListViewEmployee.ItemsSource = models.GetAll();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            //
         }
     }
-    
-
 }
