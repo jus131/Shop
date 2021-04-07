@@ -17,6 +17,8 @@
             <materialDesign:PackIcon Kind="Search" Width="18" Height="18" Margin="10 25 0 0"/>
             <TextBox materialDesign:HintAssist.Hint="Search" Margin="0 20 0 25" Width="300"/>
             
+        </StackPanel>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100 0">
             <!-- Botones de herramientas-->
             <Button Margin="100 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Nuevo">
                 <materialDesign:PackIcon Kind="PlusBox" Width="30" Height="30"/>
@@ -32,6 +34,27 @@
             </Button>
         </StackPanel>
         <!-- Data Grid-->
-        
+        <ListView Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="ID"/>
+                    <GridViewColumn
+                        Header="Nombre"/>
+                    <GridViewColumn
+                        Header="Apellido"/>
+                    <GridViewColumn
+                        Header="Identificación"/>
+                    <GridViewColumn
+                        Header="Email"/>
+                    <GridViewColumn
+                        Header="FechaNacimiento"/>
+                    <GridViewColumn
+                        Header="Cargo"/>
+                    <GridViewColumn
+                        Header="Estado"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

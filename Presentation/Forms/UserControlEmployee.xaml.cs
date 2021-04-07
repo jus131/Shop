@@ -12,12 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Domain;
 
 namespace Presentation.Forms
 {
     /// <summary>
     /// Lógica de interacción para UserControlEmployee.xaml
     /// </summary>
+   // private EmployeeModels models = new EmployeeModels();
     public partial class UserControlEmployee : UserControl
     {
         public UserControlEmployee()
@@ -25,4 +27,6 @@ namespace Presentation.Forms
             InitializeComponent();
         }
     }
+    
+
 }

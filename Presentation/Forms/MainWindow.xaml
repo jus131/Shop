@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Presentation"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+        Title="MainWindow" Height="700" Width="1224" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
     <Grid Background="#FFEEEEEE" MouseDown="Grid_MouseDown">
         <StackPanel VerticalAlignment="Top">
             <!-- Panel Top color azul rey-->
@@ -15,9 +15,9 @@
             <Grid Margin="5">
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                     <!--TextBlock -->
-                    <TextBlock Text="Sales System" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="20 0"/>
+                    <TextBlock Text="Sales System" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="100 0 0 0"/>
                     <!--Botones de Redireccion-->
-                    <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                    <!--<Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
                         <materialDesign:PackIcon Kind="Facebook"/>
                     </Button>
                     <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
@@ -25,7 +25,7 @@
                     </Button>
                     <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
                         <materialDesign:PackIcon Kind="Discord"/>
-                    </Button>
+                    </Button>-->
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 0">
                     <!--Botones de herramientas-->
@@ -93,6 +93,18 @@
                     </StackPanel>
                 </ListViewItem>
             </ListView>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                    <materialDesign:PackIcon Kind="Facebook"/>
+                </Button>
+                <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                    <materialDesign:PackIcon Kind="Github"/>
+                </Button>
+                <Button Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                    <materialDesign:PackIcon Kind="Discord"/>
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
