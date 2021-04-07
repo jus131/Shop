@@ -15,7 +15,7 @@
         <!--Barra de busqueda-->
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
             <materialDesign:PackIcon Kind="Search" Width="18" Height="18" Margin="10 25 0 0"/>
-            <TextBox materialDesign:HintAssist.Hint="Search" Margin="0 20 0 25" Width="300"/>
+            <TextBox materialDesign:HintAssist.Hint="Search" Margin="0 20 0 48" Width="300" x:Name="txtSearch" TextChanged="txtSearch_TextChanged"/>
             
         </StackPanel>
         <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100 0">
@@ -35,17 +35,17 @@
         </StackPanel>
         <!-- Data Grid-->
 
-        <ListView x:Name="ListViewEmployee" Grid.Row="1" Margin="10">
+        <ListView x:Name="ListViewEmployee" Grid.Row="1" HorizontalAlignment="Left">
             <ListView.View>
                 <GridView
                     AllowsColumnReorder="True"
                     ColumnHeaderToolTip="Information">
                     <GridViewColumn Header="ID" Width="100" DisplayMemberBinding="{Binding Id}"/>
-                    <GridViewColumn Header="Nombre" Width="100" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Apellido" Width="100" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn Header="Identificación" Width="100" DisplayMemberBinding="{Binding Identity}"/>
-                    <GridViewColumn Header="Email" Width="100" DisplayMemberBinding="{Binding Email}"/>
-                    <GridViewColumn Header="Fecha" Width="100" DisplayMemberBinding="{Binding Birthday}"/>
+                    <GridViewColumn Header="Nombre" Width="120" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Apellido" Width="120" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="Identificación" Width="120" DisplayMemberBinding="{Binding Identity}"/>
+                    <GridViewColumn Header="Email" Width="120" DisplayMemberBinding="{Binding Email}"/>
+                    <GridViewColumn Header="Fecha" Width="120" DisplayMemberBinding="{Binding Birthday}"/>
                     <GridViewColumn Header="Cargo" Width="100" DisplayMemberBinding="{Binding Position}"/>
                     <GridViewColumn Header="Estado" Width="100" DisplayMemberBinding="{Binding State1}"/>
                 </GridView>

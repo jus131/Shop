@@ -24,6 +24,7 @@ namespace Domain
 
         private IEmployeeRepository employeeRepository;
         public EntityState State { get; set; }
+        private List<EmployeeModels> listEmployee;
 
         //Metodo/Propiedades
         public int Id { get => id; set => id = value; }
@@ -98,7 +99,7 @@ namespace Domain
         public List<EmployeeModels> GetAll()
         {
             var employeeDataModel = employeeRepository.GetAll();
-            var listEmployee = new List<EmployeeModels>();
+            listEmployee = new List<EmployeeModels>();
             foreach (Employee item in employeeDataModel)
             {
                 listEmployee.Add(new EmployeeModels
@@ -114,6 +115,10 @@ namespace Domain
                 });
             }
             return listEmployee;
+        }
+        public IEnumerable<EmployeeModels> FindByID(string filter)
+        {
+            return listEmployee.FindAll(e => e.Name.Contains(filter) || e.Identity.Contains(filter));
         }
     }
 }

@@ -38,5 +38,10 @@ namespace Presentation.Forms
         {
             //
         }
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ListViewEmployee.ItemsSource = models.FindByID(txtSearch.Text);
+        }
     }
 }
