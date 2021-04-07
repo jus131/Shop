@@ -43,5 +43,10 @@ namespace Presentation.Forms
         {
             ListViewEmployee.ItemsSource = models.FindByID(txtSearch.Text);
         }
+
+        private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
+        {
+
+        }
     }
 }

@@ -7,49 +7,134 @@
              xmlns:local="clr-namespace:Presentation.Forms"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
-    <Grid Background="#FFEEEEEE">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="6*"/>
-        </Grid.RowDefinitions>
+    
+    
+    <materialDesign:DialogHost
+        DialogClosing="DialogHost_DialogClosing"
+        DialogTheme="Inherit">
+
+        <materialDesign:DialogHost.DialogContent>
+            <!--Formulario de Registro/Edición-->
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock
+                    FontSize="20"
+                    Text="Empleados"
+                    Margin="100 10"/>
+                <TextBox
+                    x:Name="txtName"
+                    Margin="20 8 20 0"
+                    HorizontalAlignment="Stretch"
+                    materialDesign:HintAssist.Hint="Nombre"/>
+                <TextBox
+                    x:Name="txtLastName"
+                    Margin="20 8 20 0"
+                    HorizontalAlignment="Stretch"
+                    materialDesign:HintAssist.Hint="Apellido"/>
+                <TextBox
+                    x:Name="txtIdentity"
+                    Margin="20 8 20 0"
+                    HorizontalAlignment="Stretch"
+                    materialDesign:HintAssist.Hint="Identificación"/>
+                <TextBox
+                    x:Name="txtEmail"
+                    Margin="20 8 20 0"
+                    HorizontalAlignment="Stretch"
+                    materialDesign:HintAssist.Hint="Correo"/>
+                <DatePicker
+                    x:Name="dpBirthday"
+                    Margin="20 8 20 0"
+                    materialDesign:HintAssist.Hint="Fecha de Nacimiento"
+                    HorizontalAlignment="Stretch" />
+                <ComboBox
+                    x:Name="cbPosition"
+                    Margin="20 8 20 0"
+                    materialDesign:HintAssist.Hint="Cargo"
+                    HorizontalAlignment="Stretch"/>
+                <ComboBox
+                    x:Name="cbState"
+                    Margin="20 8 20 0"
+                    materialDesign:HintAssist.Hint="Estado"
+                    HorizontalAlignment="Stretch"/>
+                <!--Botones de los evento Guardar o cancelar-->
+                <StackPanel Orientation="Horizontal">
+                    
+                    <Button
+                        Style="{StaticResource MaterialDesignFlatButton}"
+                        IsDefault="True"
+                        Margin="50 8 5 20"
+                        Content="ACEPTAR"
+                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                        <Button.CommandParameter>
+                            <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                True
+                            </system:Boolean>
+                        </Button.CommandParameter>
+                    </Button>
+                    <Button
+                        Style="{StaticResource MaterialDesignFlatButton}"
+                        IsDefault="True"
+                        Margin="0 8 50 20"
+                        Content="CANCELAR"
+                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                        <Button.CommandParameter>
+                            <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                True
+                            </system:Boolean>
+                        </Button.CommandParameter>
+                    </Button>
+                </StackPanel>
+                <Label
+                    FontSize="12"
+                    Margin="20 0 0 10"
+                    Content="mensaje de confirmacion"/>
+            </StackPanel>
+        </materialDesign:DialogHost.DialogContent>
+        
+        <Grid Background="#FFEEEEEE">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
         <!--Barra de busqueda-->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
-            <materialDesign:PackIcon Kind="Search" Width="18" Height="18" Margin="10 25 0 0"/>
-            <TextBox materialDesign:HintAssist.Hint="Search" Margin="0 20 0 48" Width="300" x:Name="txtSearch" TextChanged="txtSearch_TextChanged"/>
-            
-        </StackPanel>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100 0">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                <materialDesign:PackIcon Kind="Search" Width="18" Height="18" Margin="10 25 0 0"/>
+                <TextBox materialDesign:HintAssist.Hint="Search" Margin="0 20 0 48" Width="300" x:Name="txtSearch" TextChanged="txtSearch_TextChanged"/>
+                
+            </StackPanel>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100 0">
             <!-- Botones de herramientas-->
-            <Button Margin="100 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Nuevo">
-                <materialDesign:PackIcon Kind="PlusBox" Width="30" Height="30"/>
-            </Button>
-            <Button Margin="0 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Editar">
-                <materialDesign:PackIcon Kind="Edit" Width="30" Height="30"/>
-            </Button>
-            <Button Margin="0 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Eliminar">
-                <materialDesign:PackIcon Kind="Trash" Width="30" Height="30"/>
-            </Button>
-            <Button Margin="0 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Import">
-                <materialDesign:PackIcon Kind="Import" Width="30" Height="30"/>
-            </Button>
-        </StackPanel>
+                <Button Margin="100 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Nuevo" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                    <materialDesign:PackIcon Kind="PlusBox" Width="30" Height="30"/>
+                </Button>
+                <Button Margin="0 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Editar" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                    <materialDesign:PackIcon Kind="Edit" Width="30" Height="30"/>
+                </Button>
+                <Button Margin="0 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Eliminar">
+                    <materialDesign:PackIcon Kind="Trash" Width="30" Height="30"/>
+                </Button>
+                <Button Margin="0 0 5 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" ToolTip="Import">
+                    <materialDesign:PackIcon Kind="Import" Width="30" Height="30"/>
+                </Button>
+            </StackPanel>
         <!-- Data Grid-->
 
-        <ListView x:Name="ListViewEmployee" Grid.Row="1" HorizontalAlignment="Left">
-            <ListView.View>
-                <GridView
-                    AllowsColumnReorder="True"
-                    ColumnHeaderToolTip="Information">
-                    <GridViewColumn Header="ID" Width="100" DisplayMemberBinding="{Binding Id}"/>
-                    <GridViewColumn Header="Nombre" Width="120" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Apellido" Width="120" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn Header="Identificación" Width="120" DisplayMemberBinding="{Binding Identity}"/>
-                    <GridViewColumn Header="Email" Width="120" DisplayMemberBinding="{Binding Email}"/>
-                    <GridViewColumn Header="Fecha" Width="120" DisplayMemberBinding="{Binding Birthday}"/>
-                    <GridViewColumn Header="Cargo" Width="100" DisplayMemberBinding="{Binding Position}"/>
-                    <GridViewColumn Header="Estado" Width="100" DisplayMemberBinding="{Binding State1}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-    </Grid>
+            <ListView x:Name="ListViewEmployee" Grid.Row="1" HorizontalAlignment="Left">
+                <ListView.View>
+                    <GridView
+                        AllowsColumnReorder="True"
+                        ColumnHeaderToolTip="Information">
+                        <GridViewColumn Header="ID" Width="100" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Nombre" Width="120" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Apellido" Width="120" DisplayMemberBinding="{Binding LastName}"/>
+                        <GridViewColumn Header="Identificación" Width="120" DisplayMemberBinding="{Binding Identity}"/>
+                        <GridViewColumn Header="Email" Width="120" DisplayMemberBinding="{Binding Email}"/>
+                        <GridViewColumn Header="Fecha" Width="120" DisplayMemberBinding="{Binding Birthday}"/>
+                        <GridViewColumn Header="Cargo" Width="100" DisplayMemberBinding="{Binding Position}"/>
+                        <GridViewColumn Header="Estado" Width="100" DisplayMemberBinding="{Binding State1}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        
+    </materialDesign:DialogHost>
 </UserControl>
