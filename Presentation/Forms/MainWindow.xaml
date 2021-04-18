@@ -44,9 +44,6 @@
         <!--Panel Contenedor-->
         <Grid Margin="250 55 0 0">
             <Grid x:Name="GridPricipal" />
-            <!--<Grid VerticalAlignment="Center" Height="250" Width="250" HorizontalAlignment="Center" Margin="10 10">
-                <Image Source="/Assets/logo.png" />
-            </Grid>-->
         </Grid>
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
             <!-- Efecto de barra lateral-->

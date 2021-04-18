@@ -23,7 +23,7 @@ namespace Domain
         private string state;
 
         private IEmployeeRepository employeeRepository;
-        public EntityState State { get; set; }
+        public EntityState State { private get; set; }
         private List<EmployeeModels> listEmployee;
 
         //Metodo/Propiedades
@@ -118,7 +118,7 @@ namespace Domain
         }
         public IEnumerable<EmployeeModels> FindByID(string filter)
         {
-            return listEmployee.FindAll(e => e.Name.Contains(filter) || e.Identity.Contains(filter));
+            return listEmployee.FindAll(e => e.Name.IndexOf(filter, StringComparison.OrdinalIgnoreCase)>=0 || e.Identity.Contains(filter) );
         }
     }
 }
