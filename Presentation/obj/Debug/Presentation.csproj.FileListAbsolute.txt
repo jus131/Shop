@@ -28,3 +28,5 @@ C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Presentatio
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Presentation.pdb
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\UserControlEmployee.g.cs
 C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\UserControlEmployee.baml
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\MainLogin.g.cs
+C:\Users\Daniiel'Eduardo\source\repos\Shop1.0\Presentation\obj\Debug\Forms\MainLogin.baml
