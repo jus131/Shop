@@ -23,5 +23,10 @@ namespace Presentation.Forms
         {
             InitializeComponent();
         }
+
+        private void pnlogin_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }
